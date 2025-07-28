@@ -13,3 +13,7 @@ class DataTransformationPipeline:
         df = data_transformation.read_data()
         new_df = data_transformation.normalize_cols(df)
         data_transformation.save_data(new_df)
+
+if __name__ == "__main__":
+    x = DataTransformationPipeline()
+    x.initiate_data_transformation()

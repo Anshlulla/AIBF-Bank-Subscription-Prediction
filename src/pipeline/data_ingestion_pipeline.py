@@ -12,3 +12,7 @@ class DataIngestionPipeline:
         data_ingestion = DataIngestion(data_ingestion_config)
         df = data_ingestion.read_data()
         data_ingestion.save_data(df)
+
+if __name__ == "__main__":
+    x = DataIngestionPipeline()
+    x.initiate_data_ingestion()

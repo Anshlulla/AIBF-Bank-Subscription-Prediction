@@ -12,7 +12,7 @@ class DataIngestion:
         try:
             df = pd.read_excel(self.config.data_file)
             logging.info(f"Data read successfully from {self.config.data_file}")
-            return df.head()
+            return df
         except Exception as e:
             logging.error(f"Error reading data from {self.config.data_file}: {e}")
             raise e
