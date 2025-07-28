@@ -1,0 +1,30 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python -m src.pipeline.data_ingestion_pipeline
+    deps:
+    - path: src/pipeline/data_ingestion_pipeline.py
+      hash: md5
+      md5: 6a34b789c002fb6a70c5533b9502e78d
+      size: 607
+      isexec: true
+    outs:
+    - path: artifacts/data_ingestion/data
+      hash: md5
+      md5: c476c92066207d087d9f3c35ee01e7c8.dir
+      size: 3706094
+      nfiles: 1
+  data_transformation:
+    cmd: python -m src.pipeline.data_transformation_pipeline
+    deps:
+    - path: src/pipeline/data_transformation_pipeline.py
+      hash: md5
+      md5: ba7e4a7287dd324eb9d331291210868a
+      size: 733
+      isexec: true
+    outs:
+    - path: artifacts/data_transformation/data
+      hash: md5
+      md5: 48a8f47420f29012339017abe1636f88.dir
+      size: 9554256
+      nfiles: 1

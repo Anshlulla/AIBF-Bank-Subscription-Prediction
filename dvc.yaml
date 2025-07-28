@@ -6,7 +6,7 @@ stages:
     outs:
     - artifacts/data_ingestion/data
   data_transformation:
-    cmd: python src/pipeline/data_transformation_pipeline.py
+    cmd: python -m src.pipeline.data_transformation_pipeline
     deps:
     - src/pipeline/data_transformation_pipeline.py
     outs:
