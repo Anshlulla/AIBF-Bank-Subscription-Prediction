@@ -1,0 +1,15 @@
+pandas
+numpy
+scikit-learn
+shap
+fastapi
+uvicorn[standard]
+boto3
+pydantic
+joblib
+pyyaml
+python-multipart
+ipykernel
+python-box
+ensure
+openpyxl
