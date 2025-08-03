@@ -25,6 +25,6 @@ stages:
     outs:
     - path: artifacts/data_transformation/data
       hash: md5
-      md5: 48a8f47420f29012339017abe1636f88.dir
-      size: 9554256
-      nfiles: 1
+      md5: 1a1159f5ef9cf0d42b9b5dc8ab1e31e0.dir
+      size: 19109036
+      nfiles: 3
