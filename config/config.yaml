@@ -9,3 +9,5 @@ data_transformation:
   root_dir: artifacts/data_transformation
   data_file: artifacts/data_ingestion/data/data.csv
   save_file: artifacts/data_transformation/data
+  train_dir: artifacts/data_transformation/data
+  test_dir: artifacts/data_transformation/data

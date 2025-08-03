@@ -30,7 +30,9 @@ class ConfigurationManager:
         data_transformation_config = DataTransformationConfig(
             root_dir=Path(config.root_dir),
             data_file=Path(config.data_file),
-            save_file=Path(config.save_file)
+            save_file=Path(config.save_file),
+            train_dir=Path(config.train_dir),
+            test_dir=Path(config.test_dir)
         )
 
         return data_transformation_config

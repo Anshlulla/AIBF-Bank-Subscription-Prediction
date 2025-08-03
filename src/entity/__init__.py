@@ -13,3 +13,5 @@ class DataTransformationConfig:
     root_dir: Path
     data_file: Path
     save_file: Path
+    train_dir: Path
+    test_dir: Path
