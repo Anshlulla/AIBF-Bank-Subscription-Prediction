@@ -13,3 +13,5 @@ ipykernel
 python-box
 ensure
 openpyxl
+imbalanced-learn
+imblearn

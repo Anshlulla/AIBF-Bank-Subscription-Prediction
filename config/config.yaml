@@ -11,3 +11,10 @@ data_transformation:
   save_file: artifacts/data_transformation/data
   train_dir: artifacts/data_transformation/data
   test_dir: artifacts/data_transformation/data
+
+model_trainer:
+  root_dir: artifacts/model_trainer
+  data_file: artifacts/data_transformation/data/processed_data.csv
+  train_dir: artifacts/data_transformation/data/train.csv
+  test_dir: artifacts/data_transformation/data/test.csv
+  model_save_dir: artifacts/model_trainer/model/model.pkl

@@ -1,7 +1,7 @@
 from pathlib import Path
 from src.constants import *
 from src.utils.utils import *
-from src.entity import DataIngestionConfig, DataTransformationConfig
+from src.entity import DataIngestionConfig, DataTransformationConfig, ModelTrainerConfig
 
 
 class ConfigurationManager:
@@ -36,3 +36,17 @@ class ConfigurationManager:
         )
 
         return data_transformation_config
+    
+    def get_model_trainer_config(self) -> ModelTrainerConfig:
+        config = self.config.model_trainer
+        create_directories([config.root_dir])
+
+        model_trainer_config = ModelTrainerConfig(
+            root_dir=config.root_dir,
+            data_file=config.data_file,
+            train_dir=config.train_dir,
+            test_dir=config.test_dir,
+            model_save_dir=config.model_save_dir
+        )
+
+        return model_trainer_config

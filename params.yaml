@@ -1,1 +1,4 @@
-key: value
+model_trainer:
+  n_estimators: 200
+  class_weight: "balanced"
+  random_state: 42

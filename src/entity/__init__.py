@@ -15,3 +15,11 @@ class DataTransformationConfig:
     save_file: Path
     train_dir: Path
     test_dir: Path
+
+@dataclass
+class ModelTrainerConfig:
+    root_dir: Path
+    data_file: Path
+    train_dir: Path
+    test_dir: Path
+    model_save_dir: Path

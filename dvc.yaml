@@ -11,3 +11,9 @@ stages:
     - src/pipeline/data_transformation_pipeline.py
     outs:
     - artifacts/data_transformation/data
+  model_trainer:
+    cmd: python -m src.pipeline.model_trainer_pipeline
+    deps:
+    - src/pipeline/model_trainer_pipeline.py
+    outs:
+    - artifacts/model_trainer/model

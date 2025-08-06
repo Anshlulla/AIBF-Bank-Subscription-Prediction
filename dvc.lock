@@ -28,3 +28,17 @@ stages:
       md5: 1a1159f5ef9cf0d42b9b5dc8ab1e31e0.dir
       size: 19109036
       nfiles: 3
+  model_trainer:
+    cmd: python -m src.pipeline.model_trainer_pipeline
+    deps:
+    - path: src/pipeline/model_trainer_pipeline.py
+      hash: md5
+      md5: e69dc7eab0ee21c24cf2c0d4fb6b77c0
+      size: 1020
+      isexec: true
+    outs:
+    - path: artifacts/model_trainer/model
+      hash: md5
+      md5: e604ec1fa688b64071157002d99b249b.dir
+      size: 197128807
+      nfiles: 1
