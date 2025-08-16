@@ -27,21 +27,6 @@ class ModelTrainer:
         
         return X_train_resampled, y_train_resampled
     
-    def _evaluate_model(self, y_true, y_pred):
-        try:
-            accuracy = accuracy_score(y_true, y_pred)
-            f1score = f1_score(y_true, y_pred)
-            precision = precision_score(y_true, y_pred)
-            recall = recall_score(y_true, y_pred)
-            metrics = {
-                "accuracy": accuracy,
-                "precision": precision,
-                "recall": recall,
-                "f1score": f1score,
-            }
-            return metrics
-        except Exception as e:
-            raise e
     
     def train(self, train_df: pd.DataFrame, test_df: pd.DataFrame):
         X_train, y_train = train_df.drop("y", axis=1), train_df["y"]
@@ -54,10 +39,6 @@ class ModelTrainer:
         logging.info("Model training started")
         model.fit(X_train, y_train)
         logging.info("Model training completed")
-        y_pred = model.predict(X_test)
-        metrics = self._evaluate_model(y_test, y_pred)
-        logging.info("Evaluated model")
-        #print(metrics)
 
         # Save the model
         save_path = Path(self.config.model_save_dir)

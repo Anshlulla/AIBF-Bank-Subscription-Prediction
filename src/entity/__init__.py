@@ -24,3 +24,12 @@ class ModelTrainerConfig:
     test_dir: Path
     model_save_dir: Path
     smote_save_dir: Path
+
+@dataclass
+class ModelEvaluationConfig:
+    root_dir: Path
+    data_file: Path
+    train_dir: Path
+    test_dir: Path
+    model_dir: Path
+    metrics_file: Path

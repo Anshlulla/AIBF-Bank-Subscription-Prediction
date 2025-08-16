@@ -57,3 +57,26 @@ def load_pickle(file_path: Path):
         return contents
     except Exception as e:
         raise e
+    
+def save_json(file_path: Path, data: dict):
+    """
+    Saves a json File
+    """
+    try:
+        dir_path = os.path.dirname(file_path)
+        os.makedirs(dir_path, exist_ok=True)
+        with open(file_path, "w") as file:
+            json.dump(data, file, indent=4)
+    except Exception as e:
+        raise e
+    
+def load_json(file_path: Path):
+    """
+    Load a json File
+    """
+    try:
+        with open(file_path, "r") as f:
+            contents = json.load(f)
+        return contents
+    except Exception as e:
+        raise e

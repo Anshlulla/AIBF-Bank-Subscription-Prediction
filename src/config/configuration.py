@@ -1,8 +1,7 @@
 from pathlib import Path
 from src.constants import *
 from src.utils.utils import *
-from src.entity import DataIngestionConfig, DataTransformationConfig, ModelTrainerConfig
-
+from src.entity import *
 
 class ConfigurationManager:
     def __init__(self, config_path=CONFIG_FILE_PATH, params_path=PARAMS_FILE_PATH):
@@ -51,3 +50,18 @@ class ConfigurationManager:
         )
 
         return model_trainer_config
+    
+    def get_model_evaluation_config(self) -> ModelEvaluationConfig:
+        config = self.config.model_evaluation
+        create_directories([config.root_dir])
+
+        model_evaluation_config = ModelEvaluationConfig(
+            root_dir=Path(config.root_dir),
+            data_file=Path(config.data_file),
+            train_dir=Path(config.train_dir),
+            test_dir=Path(config.test_dir),
+            model_dir=Path(config.model_dir),
+            metrics_file=Path(config.metrics_file)
+        )
+
+        return model_evaluation_config

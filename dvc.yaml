@@ -17,3 +17,9 @@ stages:
     - src/pipeline/model_trainer_pipeline.py
     outs:
     - artifacts/model_trainer/model
+  model_evaluation:
+    cmd: python -m src.pipeline.model_evaluation_pipeline
+    deps:
+    - src/pipeline/model_evaluation_pipeline.py
+    outs:
+    - artifacts/model_evaluation/metrics.json

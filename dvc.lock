@@ -39,6 +39,20 @@ stages:
     outs:
     - path: artifacts/model_trainer/model
       hash: md5
-      md5: e604ec1fa688b64071157002d99b249b.dir
-      size: 197128807
-      nfiles: 1
+      md5: 29e76961e7fd4dfbe718d655288245d1.dir
+      size: 198540802
+      nfiles: 2
+  model_evaluation:
+    cmd: python -m src.pipeline.model_evaluation_pipeline
+    deps:
+    - path: src/pipeline/model_evaluation_pipeline.py
+      hash: md5
+      md5: d7994292ca49bb72fd1268ac8c3ef527
+      size: 614
+      isexec: true
+    outs:
+    - path: artifacts/model_evaluation/metrics.json
+      hash: md5
+      md5: fc82214affc3ed95d5302956791b222d
+      size: 144
+      isexec: true

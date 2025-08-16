@@ -2,6 +2,7 @@ from src.logging import logger
 from src.pipeline.data_ingestion_pipeline import DataIngestionPipeline
 from src.pipeline.data_transformation_pipeline import DataTransformationPipeline
 from src.pipeline.model_trainer_pipeline import ModelTrainerPipeline
+from src.pipeline.model_evaluation_pipeline import ModelEvaluationPipeline
 
 class Pipeline:
     def __init__(self):
@@ -39,10 +40,22 @@ class Pipeline:
         except Exception as e:
             logger.exception(e)
             raise e
+    
+    def model_evaluation(self):
+        STAGE_NAME = "Model evaluation Stage"
+        try:
+            logger.info(f"Starting stage: {STAGE_NAME}")
+            model_evaluation_pipeline = ModelEvaluationPipeline()
+            model_evaluation_pipeline.initiate_model_evaluation()
+            logger.info(f"{STAGE_NAME} completed ------")
+        except Exception as e:
+            logger.exception(e)
+            raise e
 
     def initiate_pipeline(self):
         self.data_ingestion()
         self.data_transformation()
         self.model_trainer()
+        self.model_evaluation()
 
         
