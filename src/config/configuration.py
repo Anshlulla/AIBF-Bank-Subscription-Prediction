@@ -38,7 +38,7 @@ class ConfigurationManager:
         return data_transformation_config
     
     def get_model_trainer_config(self) -> ModelTrainerConfig:
-        config = self.config.model_trainer
+        config = self.config_path.model_trainer
         create_directories([config.root_dir])
 
         model_trainer_config = ModelTrainerConfig(
@@ -46,7 +46,8 @@ class ConfigurationManager:
             data_file=config.data_file,
             train_dir=config.train_dir,
             test_dir=config.test_dir,
-            model_save_dir=config.model_save_dir
+            model_save_dir=config.model_save_dir,
+            smote_save_dir=config.smote_save_dir
         )
 
         return model_trainer_config

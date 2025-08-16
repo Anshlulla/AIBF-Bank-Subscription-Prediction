@@ -18,3 +18,4 @@ model_trainer:
   train_dir: artifacts/data_transformation/data/train.csv
   test_dir: artifacts/data_transformation/data/test.csv
   model_save_dir: artifacts/model_trainer/model/model.pkl
+  smote_save_dir: artifacts/model_trainer/model/smote.pkl

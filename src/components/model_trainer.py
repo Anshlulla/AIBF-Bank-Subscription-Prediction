@@ -18,6 +18,13 @@ class ModelTrainer:
     def _resample_data(self, X_train, y_train):
         smote = SMOTE(random_state=self.params["random_state"])
         X_train_resampled, y_train_resampled = smote.fit_resample(X_train, y_train)
+
+        # Save the smote object
+        save_path = Path(self.config.smote_save_dir)
+        os.makedirs(save_path.parent, exist_ok=True)
+        save_pickle(smote, save_path)
+        logging.info("Data resampling completed")
+        
         return X_train_resampled, y_train_resampled
     
     def _evaluate_model(self, y_true, y_pred):
@@ -52,6 +59,7 @@ class ModelTrainer:
         logging.info("Evaluated model")
         #print(metrics)
 
+        # Save the model
         save_path = Path(self.config.model_save_dir)
         os.makedirs(save_path.parent, exist_ok=True)
         save_pickle(model, save_path)

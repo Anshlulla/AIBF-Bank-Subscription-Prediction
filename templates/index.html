@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prediction</title>
+</head>
+
+<body>
+    <h2>Predict Bank Subscription</h2>
+    <form action="/predict" method="post">
+        <label>Age: <input type="number" name="age" /></label><br>
+        <label>Balance: <input type="number" name="balance" /></label><br>
+        <label>Day: <input type="number" name="day" /></label><br>
+        <label>Duration: <input type="number" name="duration" /></label><br>
+        <label>Campaign: <input type="number" name="campaign" /></label><br>
+        <label>Pdays: <input type="number" name="pdays" /></label><br>
+        <label>Previous: <input type="number" name="previous" /></label><br>
+
+        <label>Job:</label>
+        <select name="job">
+            <option value="job_blue-collar">Blue Collar</option>
+            <option value="job_entrepreneur">Entrepreneur</option>
+            <option value="job_housemaid">Housemaid</option>
+            <option value="job_management">Management</option>
+            <option value="job_retired">Retired</option>
+            <option value="job_self-employed">Self-Employed</option>
+            <option value="job_services">Services</option>
+            <option value="job_student">Student</option>
+            <option value="job_technician">Technician</option>
+            <option value="job_unemployed">Unemployed</option>
+            <option value="job_unknown">Unknown</option>
+        </select><br>
+
+        <!-- Repeat for marital, education, default, housing, loan, contact, month, poutcome -->
+
+        <input type="submit" value="Predict" />
+    </form>
+
+</body>
+
+</html>

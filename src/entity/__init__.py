@@ -23,3 +23,4 @@ class ModelTrainerConfig:
     train_dir: Path
     test_dir: Path
     model_save_dir: Path
+    smote_save_dir: Path
