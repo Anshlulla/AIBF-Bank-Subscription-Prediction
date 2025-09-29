@@ -1,10 +1,7 @@
 pandas
 numpy
 scikit-learn
-shap
-fastapi
 uvicorn[standard]
-boto3
 pydantic
 joblib
 pyyaml
@@ -15,4 +12,4 @@ ensure
 openpyxl
 imbalanced-learn
 imblearn
-Flask
+streamlit
