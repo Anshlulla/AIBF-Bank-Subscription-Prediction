@@ -12,4 +12,5 @@ ensure
 openpyxl
 imbalanced-learn
 imblearn
+gdown
 streamlit
