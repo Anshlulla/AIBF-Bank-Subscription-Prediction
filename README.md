@@ -1,4 +1,4 @@
-# Bank Subscription Prediction MLOps Project
+# Bank Subscription Prediction AIBF Project
 
 ## 📋 Project Overview
 
@@ -166,5 +166,6 @@ docker run --rm -p 8501:8501 aibf-project:latest
 - Docker support ensures consistent deployment across environments.
 
 ---
+
 
 
