@@ -33,12 +33,8 @@ You can test it out at: [streamlit deployment](https://ai-bank-subscription-pred
 
 ---
 
-## 📝 Notes
-
-- The pipeline is fully modular and can be extended or modified for other tabular classification tasks.
-- All experiment artifacts and data versions are tracked with DVC for reproducibility.
-- The Streamlit app provides an interactive interface for predictions using the trained model.
-- Docker support ensures consistent deployment across environments.
+## 📋Methodology Diagram
+<img width="759" height="564" alt="image" src="https://github.com/user-attachments/assets/4d7d01bb-8160-4dbd-93c6-987e88058ba4" />
 
 ---
 
@@ -158,5 +154,12 @@ docker build -t anshlulla/aibf-project:latest .
 ```bash
 docker run --rm -p 8501:8501 aibf-project:latest
 ```
+
+## 📝 Notes
+
+- The pipeline is fully modular and can be extended or modified for other tabular classification tasks.
+- All experiment artifacts and data versions are tracked with DVC for reproducibility.
+- The Streamlit app provides an interactive interface for predictions using the trained model.
+- Docker support ensures consistent deployment across environments.
 
 ---
