@@ -5,6 +5,7 @@
 This project is an end-to-end MLOps pipeline for predicting whether a bank client will subscribe to a term deposit, based on their demographic and historical banking data. The pipeline is modular, reproducible, and production-ready, leveraging tools like DVC for data and pipeline versioning, Docker for containerization, and Streamlit for interactive model inference.
 
 You can test it out at: [streamlit deployment](https://ai-bank-subscription-prediction.streamlit.app/)
+Find the report at: [`Project Report`](CA2_22070126013.pdf)
 
 ---
 
@@ -163,3 +164,4 @@ docker run --rm -p 8501:8501 aibf-project:latest
 - Docker support ensures consistent deployment across environments.
 
 ---
+
